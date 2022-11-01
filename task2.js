@@ -55,12 +55,13 @@ function finalResult() {
 			const alphabetsRegex = /^[A-Za-z]+$/;
 			const numberRegex = /^[0-9]+$/;
 
-			//If inputs match the regexes, proceed to use fetchData function to perform a get request
+			//If inputs match the regexes, proceed to use fetchData function to perform a get request otherwise throw
+			// an error message
 			if (
 				categoryInput.match(alphabetsRegex) &&
 				limitInput.match(numberRegex)
 			) {
-				//declare the variable to convert string to an integer
+				//declare the variable to convert string to an integer before performing the get request
 				let intLimitInput = parseInt(limitInput);
 				fetchData(categoryInput, intLimitInput);
 			} else {
