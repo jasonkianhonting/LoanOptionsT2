@@ -75,4 +75,5 @@ function finalResult() {
 	}
 }
 
+//When the user run the file and provided the arguments, this function will be executed
 finalResult();
